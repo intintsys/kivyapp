@@ -27,8 +27,7 @@ jobs:
         mv cmdline-tools latest
         echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
         echo "$HOME/android-sdk/cmdline-tools/latest/bin" >> $GITHUB_PATH
-        yes | sdkmanager --licenses
-
+        yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses
     - name: Build APK
       run: |
         buildozer android debug
