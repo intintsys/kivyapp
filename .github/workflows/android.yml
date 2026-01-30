@@ -18,6 +18,8 @@ jobs:
         sudo apt install -y python3-pip openjdk-11-jdk zip unzip git
         pip3 install --upgrade pip
         pip3 install buildozer cython
+        yes | sdkmanager --licenses
+
 
     - name: Build APK
       run: |
